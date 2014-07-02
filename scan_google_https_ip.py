@@ -72,8 +72,9 @@ class GoogleScaner(object):
             '*.googlevideo.com',
             '*.gvt1.com',
             ))
-    google_domain_r = re.compile(r'\*.appengine\.google\.com$')
-    def analyse(self, ips, check_times=4):
+    #google_domain_r = re.compile(r'\*.appengine\.google\.com$')
+    google_domain_r = re.compile(r'(\*\.)?google(\.\w+)+')
+    def analyse(self, ips, check_times=2):
         ip_collection = dict()
         for result in self.detect_https(ips):
             ip = result['ip']
