@@ -12,6 +12,8 @@ scan ips which google https server(*.google.com, *.google.us, etc.) use.
 * python 2.7
 * gevent
 * requests
+* sqlite3
+* sqlalchemy
 
 ### USAGE
 ``./scan_google_https_ip.py``
